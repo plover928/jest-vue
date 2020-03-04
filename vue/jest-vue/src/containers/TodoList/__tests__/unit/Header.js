@@ -4,7 +4,7 @@ import { findTestWrapper } from '@/utils/testUtils.js'
 
 it('Header 样式发生改变，做提示', () => {
   const wrapper = shallowMount(Header)
-  expect(wrapper).toMatchSnapshot();
+  expect(wrapper).toMatchSnapshot()
 })
 
 it('Header 包含 input 框', () => {
@@ -45,7 +45,7 @@ it('Header 中 input 框输入回车，有内容时，向外触发事件', () =>
 
 it('Header 中 input 框输入回车，有内容时，向外触发事件，同时清空inputValue', () => {
   const wrapper = shallowMount(Header)
-  const input = findTestWrapper(wrapper, 'input');
+  const input = findTestWrapper(wrapper, 'input')
   input.setValue('dell lee')
   input.trigger('keyup.enter')
   expect(wrapper.emitted().add).toBeTruthy()
