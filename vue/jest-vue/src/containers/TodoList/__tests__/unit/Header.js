@@ -45,9 +45,9 @@ it('Header 中 input 框输入回车，有内容时，向外触发事件', () =>
 
 it('Header 中 input 框输入回车，有内容时，向外触发事件，同时清空inputValue', () => {
   const wrapper = shallowMount(Header)
-  const input = findTestWrapper(wrapper, 'input')
+  const input = findTestWrapper(wrapper, 'input').at(0)
   input.setValue('dell lee')
   input.trigger('keyup.enter')
   expect(wrapper.emitted().add).toBeTruthy()
-  expect(wrapper.vm.$data.inputValue).toBe('')
+  expect(wrapper.vm.inputValue).toBe('')
 })
