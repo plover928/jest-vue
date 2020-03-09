@@ -1,10 +1,10 @@
 <template>
-  <div class="header">
-    <div class="header-content">
+  <div class='header'>
+    <div class='header-content'>
       TodoList
       <input
-        class="header-input"
-        data-test="input"
+        class='header-input'
+        data-test='header-input'
         v-model="inputValue"
         @keyup.enter="addTodoItem"
         placeholder="Add TodoItem"
@@ -34,21 +34,22 @@ export default {
 
 <style scoped lang="stylus">
   .header {
-    line-height : 60px;
-    background : #333;
+    line-height: 60px;
+    background: #333;
   }
   .header-content {
-    width : 600px;
-    margin : 0 auto;
-    color : #fff;
-    font-size : 24px;
+    width: 600px;
+    margin: 0 auto;
+    color: #FFF;
+    font-size: 24px;
   }
   .header-input {
-    float : right;
-    width : 360px;
-    margin-top : 16px;
-    line-height : 24px;
-    outline : none;
-    color : #333;
+    float: right;
+    width: 360px;
+    margin-top: 16px;
+    line-height: 24px;
+    outline: none;
+    color: #333;
+    text-indent: 10px;
   }
 </style>

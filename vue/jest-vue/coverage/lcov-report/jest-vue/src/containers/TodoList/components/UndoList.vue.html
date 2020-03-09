@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -171,15 +171,7 @@
 <a name='L113'></a><a href='#L113'>113</a>
 <a name='L114'></a><a href='#L114'>114</a>
 <a name='L115'></a><a href='#L115'>115</a>
-<a name='L116'></a><a href='#L116'>116</a>
-<a name='L117'></a><a href='#L117'>117</a>
-<a name='L118'></a><a href='#L118'>118</a>
-<a name='L119'></a><a href='#L119'>119</a>
-<a name='L120'></a><a href='#L120'>120</a>
-<a name='L121'></a><a href='#L121'>121</a>
-<a name='L122'></a><a href='#L122'>122</a>
-<a name='L123'></a><a href='#L123'>123</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L116'></a><a href='#L116'>116</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -222,19 +214,13 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -301,7 +287,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
-  &lt;div class="undoList"&gt;
+  &lt;div class="undolist"&gt;
     &lt;div class="title"&gt;
       正在进行
       &lt;span data-test="count" class="count"&gt;{{list.length}}&lt;/span&gt;
@@ -309,17 +295,17 @@
     &lt;ul class="list"&gt;
       &lt;li
         v-for="(item, index) in list" :key="index"
-        data-test="item"
+        data-test="list-item"
         class="item"
-        @click="() =&gt; {changeStatus(index)}"
+        @click="() =&gt; changeStatus(index)"
       &gt;
         &lt;input
-          class="input"
+          class="user-input"
           v-if="item.status === 'input'"
           data-test="input"
           :value="item.value"
           @blur="handleInputBlur"
-          @change="(e) =&gt; {handleInputChange(e.target.value, index)}"
+          @change="(e) =&gt; handleInputChange(e.target.value, index)"
         /&gt;
         &lt;span v-else&gt;{{item.value}}&lt;/span&gt;
         &lt;span
@@ -337,26 +323,19 @@
 &lt;script&gt;
 export default {
   name: 'UndoList',
-  props: {
-    list: {
-      type: Array,
-<span class="fstat-no" title="function not covered" >      default () {</span>
-<span class="cstat-no" title="statement not covered" >        return []</span>
-      }
-    }
-  },
+  props: ['list'],
   methods: {
-    handleDelete (index) {
-      this.$emit('delete', index)
+<span class="fstat-no" title="function not covered" >    handleDelete (index) {</span>
+<span class="cstat-no" title="statement not covered" >      this.$emit('delete', index)</span>
     },
-    changeStatus (index) {
-      this.$emit('status', index)
+<span class="fstat-no" title="function not covered" >    changeStatus (index) {</span>
+<span class="cstat-no" title="statement not covered" >      this.$emit('status', index)</span>
     },
-    handleInputBlur () {
-      this.$emit('reset')
+<span class="fstat-no" title="function not covered" >    handleInputBlur () {</span>
+<span class="cstat-no" title="statement not covered" >      this.$emit('reset')</span>
     },
-    handleInputChange (value, index) {
-      this.$emit('change', {
+<span class="fstat-no" title="function not covered" >    handleInputChange (value, index) {</span>
+<span class="cstat-no" title="statement not covered" >      this.$emit('change', {</span>
         value,
         index
       })
@@ -364,72 +343,72 @@ export default {
   }
 }
 &lt;/script&gt;
+&nbsp;
 &lt;style scoped lang="stylus"&gt;
-  .undoList {
-    width : 600px;
-    margin : 0 auto;
+  .undolist {
+    width: 600px;
+    margin: 0 auto;
   }
   .title {
-    margin : 10px 0;
-    line-height : 30px;
-    font-size : 24px;
-    font-weight : bold;
+    margin: 10px 0;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: bold;
   }
   .count {
-    margin-top : 5px;
-    float : right;
-    display : block;
-    width : 20px;
-    height : 20px;
-    line-height : 20px;
-    text-align : center;
-    background : #e6e6e6;
-    border-radius : 10px;
-    font-size : 12px;
-    color : #000;
+    margin-top: 5px;
+    float: right;
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #e6e6e6;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #000;
   }
   .list {
-    list-style-type : none;
+    list-style-type: none;
   }
   .item {
-    margin-bottom : 10px;
-    line-height : 32px;
-    font-size : 14px;
-    background : #fff;
-    border-left : 5px solid #629a9a;
-    border-radius : 3px;
-    text-indent : 10px;
+    margin-bottom: 10px;
+    line-height: 32px;
+    font-size: 14px;
+    background: #FFF;
+    border-left: 5px solid #629A9A;
+    border-radius: 3px;
+    text-indent: 10px;
   }
   .delete {
-    display : block;
-    margin-top : 5px;
-    margin-right : 10px;
-    float : right;
-    width : 20px;
-    height : 20px;
-    line-height : 20px;
-    text-align : center;
-    background : #e6e6e6;
-    border-radius : 10px;
-    font-size : 12px;
-    color : #000;
-    text-indent : 0;
-    cursor pointer
+    display: block;
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #e6e6e6;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #000;
+    text-indent: 0;
+    cursor: pointer;
   }
-  .input {
-    width : 460px;
-    height : 22px;
-    text-indent : 10px;
+  .user-input {
+    width: 460px;
+    height: 22px;
+    text-indent: 10px;
   }
-&lt;/style&gt;
-&nbsp;</pre></td></tr></table></pre>
+&lt;/style&gt;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Mar 06 2020 10:52:20 GMT+0800 (GMT+08:00)
+                at Fri Mar 06 2020 17:01:28 GMT+0800 (GMT+08:00)
             </div>
         </div>
         <script src="..\..\..\..\..\prettify.js"></script>

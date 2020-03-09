@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1583463140960" clover="3.2.0">
-  <project timestamp="1583463140961" name="All files">
-    <metrics statements="139" coveredstatements="26" conditionals="327" coveredconditionals="4" methods="69" coveredmethods="15" elements="535" coveredelements="45" complexity="0" loc="139" ncloc="139" packages="6" files="11" classes="11"/>
+<coverage generated="1583485288238" clover="3.2.0">
+  <project timestamp="1583485288238" name="All files">
+    <metrics statements="138" coveredstatements="10" conditionals="327" coveredconditionals="1" methods="68" coveredmethods="5" elements="533" coveredelements="16" complexity="0" loc="138" ncloc="138" packages="6" files="11" classes="11"/>
     <package name="jest-vue">
       <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="babel.config.js" path="E:\zxcode\vue\jest-vue\babel.config.js">
@@ -145,51 +145,50 @@
       </file>
     </package>
     <package name="jest-vue.src.containers.TodoList">
-      <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8"/>
+      <metrics statements="16" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="8" coveredmethods="2"/>
       <file name="TodoList.vue" path="E:\zxcode\vue\jest-vue\src\containers\TodoList\TodoList.vue">
-        <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8"/>
+        <metrics statements="16" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="8" coveredmethods="2"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="22" count="7" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="39" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="42" count="2" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
-        <line num="50" count="3" type="stmt"/>
-        <line num="52" count="1" type="stmt"/>
-        <line num="55" count="1" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
       </file>
     </package>
     <package name="jest-vue.src.containers.TodoList.components">
-      <metrics statements="9" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="6"/>
+      <metrics statements="8" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="2"/>
       <file name="Header.vue" path="E:\zxcode\vue\jest-vue\src\containers\TodoList\components\Header.vue">
-        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="20" count="7" type="stmt"/>
-        <line num="26" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="26" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
       </file>
       <file name="UndoList.vue" path="E:\zxcode\vue\jest-vue\src\containers\TodoList\components\UndoList.vue">
-        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="48" count="2" type="stmt"/>
-        <line num="51" count="2" type="stmt"/>
-        <line num="54" count="1" type="stmt"/>
-        <line num="57" count="1" type="stmt"/>
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
       </file>
     </package>
     <package name="jest-vue.src.utils">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="testUtils.js" path="E:\zxcode\vue\jest-vue\src\utils\testUtils.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="15" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
       </file>
     </package>
   </project>
