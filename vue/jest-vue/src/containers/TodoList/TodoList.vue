@@ -1,23 +1,24 @@
 <template>
   <div>
-    <Header @add="addUndoItem"></Header>
+    <Header @add="addUndoItem" />
     <UndoList
       :list="undoList"
       @delete="handleItemDelete"
       @status="changeStatus"
       @reset="resetStatus"
       @change="changeItemValue"
-    >
-    </UndoList>
+    />
   </div>
 </template>
 
 <script>
 import Header from './components/Header'
 import UndoList from './components/UndoList'
-
 export default {
   name: 'TodoList',
+  components: {
+    Header, UndoList
+  },
   data () {
     return {
       undoList: []
@@ -54,10 +55,6 @@ export default {
     changeItemValue (obj) {
       this.undoList[obj.index].value = obj.value
     }
-  },
-  components: {
-    Header,
-    UndoList
   }
 }
 </script>
