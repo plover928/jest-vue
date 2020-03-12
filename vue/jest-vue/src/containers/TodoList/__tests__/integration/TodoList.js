@@ -18,3 +18,15 @@ it(`
   expect(listItems.length).toBe(1)
   expect(listItems.at(0).text()).toContain(content)
 })
+
+it(`
+  1. 用户进入页面时，请求远程数据
+  2. 列表应该展示远程返回数据
+`, () => {
+  const wrapper = mount(TodoList, { store })
+  
+  wrapper.vm.$nextTick(() => {
+    const listItems = findTestWrapper(wrapper, 'list-item')
+    expect(listItems.length).toBe(2)
+  })
+})
